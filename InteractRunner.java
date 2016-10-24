@@ -5,15 +5,18 @@ public class InteractRunner {
         Scanner reader = new Scanner(System.in);
         try {
             Calculator calc = new Calculator();
-            String exit = "no";
+            String exit = "no", x = "no";
             while (!exit.equals("yes")) {
                 System.out.println("Enter first arg : ");
-                String first = reader.next();
+                double first = Double.parseDouble(reader.next());
                 System.out.println("Enter second arg : ");
-                String second = reader.next();
-                calc.add(Integer.valueOf(first), Integer.valueOf(second));
+                double second = Double.parseDouble(reader.next());
+                System.out.println("Enter operation type : ");
+                String oper = reader.next();
+                calc.main(first, second, oper);
                 System.out.println("Result : " + calc.getResult());
-                calc.clearResult();
+                System.out.println("Clear result : yes / no ");
+                calc.clearResult(reader.next());
                 System.out.println("Exit : yes / no ");
                 exit = reader.next();
             }
