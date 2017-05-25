@@ -11,7 +11,7 @@ public class InteractRunner {
                 double first = Double.parseDouble(reader.next());
                 System.out.println("Enter second arg : ");
                 double second = Double.parseDouble(reader.next());
-                System.out.println("Enter operation type : ");
+                System.out.println("Enter operation type [ add | sub | mul | div ]: ");
                 String oper = reader.next();
                 calc.main(first, second, oper);
                 System.out.println("Result : " + calc.getResult());
