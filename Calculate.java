@@ -1,7 +1,7 @@
 public class Calculate {
 	
 	public static void main (String[] arg) {
-		System.out.println("Calculating...");
+		//System.out.println("Calculating...");
 		String operation = String.valueOf(arg[0]);
 		double first = Double.valueOf(arg[1]);
 		double second = Double.valueOf(arg[2]);
