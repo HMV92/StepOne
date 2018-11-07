@@ -39,8 +39,9 @@ public class Calculator {
     }
 
     public void clearResult(String x) {
-        if (x == "yes") {
+        if (x.equals("yes")) {
             this.result = 0;
+			System.out.println("result was cleared");
         }
     }
 
