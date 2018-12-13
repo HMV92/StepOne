@@ -1,19 +1,50 @@
 import java.util.Scanner;
 import javax.swing.*;
-import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.BorderLayout;
 
 
 public class InteractRunner {
 	private static String exit = "no";
 	private static double x = 0.0;
-    public static void main(String[] arg) {
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] arg) {
 		Scanner reader = new Scanner(System.in);
         JPanel windowContent = new JPanel();
-		FlowLayout fl = new FlowLayout();
-		windowContent.setLayout(fl);
+		JButton numButtons[] = new JButton[9];
+		GirdBagLayout gb = new GirdBagLayout();
+		GirdBagConstraints constr = new GirdBagConstraints();
+		constr.x=0;
+		constr.y=0;
+		constr.gridheight = 1;
+		constr.gridwidth = 6;
+		constr.fill = constr.BOTH;
+		constr.weightx = 1;
+		constr.weighty = 1;
+		constr.anchor = constr.CENTER;
+		displayField = new JTextField();
+		gb.setConstraints(displayField,constr);
+		windowContent.add(displayField);
+		
+		windowContent.setLayout(gb);
+		
 		
 		JLabel label1 = new JLabel("First number");
 		JTextField field1 = new JTextField(15);
+		field1.setHorizontalAlignmentr(RIGHT);
 		JLabel label2 = new JLabel("Second number");
 		JTextField field2 = new JTextField(15);
 		JLabel label3 = new JLabel("Result");
@@ -22,7 +53,6 @@ public class InteractRunner {
 		JButton sub = new JButton("sub");
 		JButton mul = new JButton("mul");
 		JButton div = new JButton("div");
-		//JButton sum = new JButton("add");
 		
 		windowContent.add(label1);	
 		windowContent.add(field1);	
@@ -67,19 +97,7 @@ public class InteractRunner {
                 reader.close();
         }*/
 	}
-	/*public static void checker (String data){
-		x = 0.0;
-		switch (data) {
-			case "exit":
-				System.out.println("exit case was activated");
-				exit = "yes";
-				break;
-			default: 
-				System.out.println("default case was activated");
-				x = Double.parseDouble(data);
-				break;
-			
-		}
-		//return x;
-    }*/
+	public class numButton (String value){
+		JButton 
+    }
 }
